@@ -6,27 +6,27 @@ const Home = () => {
    {
      "id": 1,
      "title": "hats",
-     "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+     "imageUrl": "https://images4-g.ravelrycache.com/uploads/heidiarjes/167343764/penguin_finished-1_medium.jpg"
    },
    {
      "id": 2,
      "title": "jackets",
-     "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+     "imageUrl": "https://images.stockx.com/images/Supreme-Penguins-Hooded-Fleece-Jacket-Blue.jpg?fit=fill&bg=FFFFFF&w=576&h=384&fm=avif&auto=compress&dpr=2&trim=color&updated_at=1634933503&q=60"
    },
    {
      "id": 3,
      "title": "sneakers",
-     "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+     "imageUrl": "https://cdn.shopify.com/s/files/1/2286/6873/products/SW-33131-xx_ikiki_George_P_Penguin_001_5813e578-33c3-424b-b528-20aaa621191d.jpg?v=1608745225"
    },
    {
      "id": 4,
      "title": "womens",
-     "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+     "imageUrl": "https://m.media-amazon.com/images/I/A1nYNISnPeL._CLa%7C2140%2C2000%7CA1SiV3-4KIL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
    },
    {
      "id": 5,
      "title": "mens",
-     "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+     "imageUrl": "https://i5.walmartimages.com/asr/e1c18004-bc46-420c-9381-ac8f81395103_1.6d1c16b26c58730a077e21a66a3791c8.jpeg"
    }
  ]
 
