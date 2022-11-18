@@ -33,12 +33,19 @@ const SignInForm= () => {
             console.log(response)
             resetForm()
         } catch(error) {
-
+            switch(error.code) {
+                case 'auth/wrong-password':
+                    alert('Incorrect Password')
+                    break
+                case 'auth/user-not-found':
+                    alert('User Not Found')
+                    break  
+                default:
+                    console.log(error)
             }
         }
 
-        //see if user is authenticated
-        // createUserDocumentFromAuth()
+    }
 
 
     const handleChange = (e) => {
@@ -55,7 +62,7 @@ const SignInForm= () => {
                 <FormInput label="Password" type='password' required onChange={handleChange} name='password' value={password}/>  
                 <div className='buttons-container'>
                     <Button type='submit'>SIGN IN</Button>
-                    <Button buttonType='google' onClick={signInWithGoogle}>SIGN IN WITH GOOGLE</Button>
+                    <Button type='button' buttonType='google' onClick={signInWithGoogle}>GOOGLE SIGN IN</Button>
                 </div>
                 {/* <Button buttonType={'google'}>SIGN IN WITH GOOGLE</Button> */}
             </form> 
