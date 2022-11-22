@@ -6,7 +6,6 @@ import { UserContext } from '../../contexts/user.context';
 import './sign-in-form.styles.scss'
 
 import { signInWithGooglePopup, createUserDocumentFromAuth, signInAuthUserWithEmailAndPassword } from '../../utils/firebase/firebase.utils';
-import { User } from 'ig';
 
 const defaultFormFields = {
     email: '',
