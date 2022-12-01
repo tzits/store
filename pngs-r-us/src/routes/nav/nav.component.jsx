@@ -13,7 +13,6 @@ import { signOutUser } from '../../utils/firebase/firebase.utils'
 
 const Nav = () => {
     const currentUser = useSelector(selectCurrentUser)
-
     const isCartOpen = useSelector(selectIsCartOpen)  
 
     return (
