@@ -1,7 +1,7 @@
 import { CartItemDiv, Img, ItemDetails, Name, Price, RemoveButton} from './cart-item.styles.jsx'
 import { useSelector, useDispatch } from 'react-redux'
-import { clearItemFromCart } from '../../store/cart/cart.action.js'
-import { selectCartItems } from '../../store/cart/cart.selector.js'
+import { clearItemFromCart } from '../../store/cart/cart.action'
+import { selectCartItems } from '../../store/cart/cart.selector'
 
 
 const CartItem = ({ cartItem }) => {

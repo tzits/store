@@ -11,12 +11,12 @@ export function withMatcher<AC extends (...args: any[]) => AnyAction & { type: s
 
 export function withMatcher(actionCreator: Function) {
     const type = actionCreator().type;
-    return Object.assign(actionCreator), {
+    return Object.assign(actionCreator, {
         type,
         match(action: AnyAction) {
             return action.type === type
-        }
-    }
+        },
+    });
 }
 
 export type ActionWithPayload<T, P> = {
