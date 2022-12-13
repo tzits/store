@@ -1,6 +1,10 @@
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
+import { selectIsCartOpen } from '../../store/cart/cart.selector'
+import { useDispatch } from 'react-redux'
+import { setIsCartOpen } from '../../store/cart/cart.action'
+
 
 import { selectCartItems } from '../../store/cart/cart.selector'
 
@@ -10,11 +14,15 @@ import Button from '../button/button.component'
 import CartItem from '../cart-item/cart-item.component'
 
 const CartDropdown = () => {
+    const dispatch = useDispatch()
+    const isCartOpen = useSelector(selectIsCartOpen)
     const cartItems = useSelector(selectCartItems)
     const navigate = useNavigate();
 
     const goToCheckoutHandler = useCallback(() => {
+        dispatch(setIsCartOpen(!isCartOpen))
         navigate('/checkout')}, [])
+
 
     return(
         <DropdownContainer>

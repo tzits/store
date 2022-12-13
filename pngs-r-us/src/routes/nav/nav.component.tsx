@@ -10,7 +10,6 @@ import { ReactComponent as CrwnLogo } from '../../assets/crown.svg'
 import { NavigationContainer, LogoContainer, NavLinks, NavLink } from './nav.styles'
 import { signOutStart } from '../../store/user/user.action'
 
-
 const Nav = () => {
     const dispatch = useDispatch()
     const currentUser = useSelector(selectCurrentUser)
