@@ -5,5 +5,8 @@ export const AuthContainer = styled.div`
     width: 900px;
     justify-content: space-between;
     margin: 30px auto;
-    /* flex-direction: row; */
+    @media screen and (max-width: 800px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+  }
 `

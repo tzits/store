@@ -4,6 +4,10 @@ export const SignInContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 380px;
+    @media screen and (max-width: 800px) {
+        padding-bottom: 80px;
+
+  }
 `
 
 export const Header = styled.h2`

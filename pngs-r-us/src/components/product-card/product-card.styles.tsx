@@ -41,6 +41,18 @@ export const ProductCardContainer = styled.div`
       display: flex;
     }
   }
+ @media screen and (max-width: 800px) {
+      width: 45vw;
+      ${Img} {
+        opacity: unset
+      }
+      ${BaseButton},
+    ${GoogleSignInButton},
+    ${InvertedButton} {
+      opacity: unset;
+    }
+
+    }
 `
 
 export const Footer = styled.div`
