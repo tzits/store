@@ -1,10 +1,15 @@
-import { CartItemDiv, Img, ItemDetails, Name, Price, RemoveButton} from './cart-item.styles.jsx'
+import { CartItemDiv, Img, ItemDetails, Name, Price, RemoveButton} from './cart-item.styles'
 import { useSelector, useDispatch } from 'react-redux'
 import { clearItemFromCart } from '../../store/cart/cart.action'
 import { selectCartItems } from '../../store/cart/cart.selector'
+import { CartItem as TCartItem} from '../../store/cart/cart.types'
+import { FC } from 'react'
 
+type CartItemProps = {
+    cartItem: TCartItem
+}
 
-const CartItem = ({ cartItem }) => {
+const CartItem: FC<CartItemProps> = ({ cartItem }) => {
     const { name, imageUrl, price, quantity } = cartItem
 
     const dispatch = useDispatch()

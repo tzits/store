@@ -6,10 +6,15 @@ import {
   Body,
   Header,
   Paragraph
-} from  './directory-item.styles.jsx'
+} from  './directory-item.styles'
+import { FC } from 'react'
+import { DirectoryCategory } from '../directory/directory.component'
 
+type Category = {
+  category: DirectoryCategory
+}
 
-const DirectoryItem = ( {category} ) =>  {
+const DirectoryItem: FC<Category> = ( {category} ) =>  {
     const { imageUrl, title, route } = category
     const navigate = useNavigate()
 

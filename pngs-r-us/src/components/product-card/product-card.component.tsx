@@ -3,9 +3,15 @@ import { selectCartItems } from '../../store/cart/cart.selector';
 import { addItemToCart } from '../../store/cart/cart.action';
 
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component'
-import {ProductCardContainer, Img, Name, Price, Footer} from './product-card.styles.jsx'
+import {ProductCardContainer, Img, Name, Price, Footer} from './product-card.styles'
+import { FC } from 'react'
+import { CategoryItem } from '../../store/category/category.types';
 
-const ProductCard = ( {product} ) => {
+type ProductCardProps = {
+    product: CategoryItem
+}
+
+const ProductCard: FC<ProductCardProps> = ( {product} ) => {
     const { name, price, imageUrl } = product;
     const dispatch = useDispatch()
     const cartItems = useSelector(selectCartItems)
@@ -19,7 +25,7 @@ const ProductCard = ( {product} ) => {
                 <Name>{name}</Name>
                 <Price>{price}</Price>
             </Footer>
-            <Button type={BUTTON_TYPE_CLASSES.inverted} onClick={addProductToCart}>Add to Cart</Button>
+            <Button buttonType={BUTTON_TYPE_CLASSES.inverted} onClick={addProductToCart}>Add to Cart</Button>
         </ProductCardContainer>
     )
 }
